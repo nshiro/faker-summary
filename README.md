@@ -99,7 +99,7 @@ $faker->unique()->randomElement([1, 2, 3]);  // 4 回呼び出してしまうと
 
 ```php
 // null（デフォルト値）を時折混ぜたい時に便利。
-$faker->optional(0.1)->randomElement([1, 2, 3]);  // 10 回に 1 回の確率で、nullを返す
+$faker->optional(0.1)->randomElement([1, 2, 3]);  // 90%の確率でnullを返す
 ```
 
 # おまけ
