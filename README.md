@@ -1,6 +1,6 @@
 # よく使う Faker のまとめです
 
-詳しくは、新本家サイトにて。　[新本家サイト](https://github.com/fakerphp/faker)
+詳しくは、旧本家サイトにて。　[旧本家サイト](https://github.com/fzaninotto/Faker)　[新本家サイト](https://github.com/fakerphp/faker)
 
 # 住所系
 
