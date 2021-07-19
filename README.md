@@ -5,32 +5,32 @@
 # 住所系
 
 ```php
-$this->faker->postcode1;       	// 834（郵便番号3桁）
-$this->faker->postcode2;       	// 8290（郵便番号4桁）
-$this->faker->postcode;       	// 8348290（郵便番号7桁）
-$this->faker->prefecture;     	// 東京都
-$this->faker->city;            	// 鈴木市
-$this->faker->ward;            	// 南区
-$this->faker->streetAddress;   	// 斉藤町若松8-6-4
-$this->faker->secondaryAddress;   	// ハイツ中村108号
+$this->faker->postcode1();       	// 834（郵便番号3桁）
+$this->faker->postcode2();       	// 8290（郵便番号4桁）
+$this->faker->postcode();       	// 8348290（郵便番号7桁）
+$this->faker->prefecture();     	// 東京都
+$this->faker->city();            	// 鈴木市
+$this->faker->ward();            	// 南区
+$this->faker->streetAddress();   	// 斉藤町若松8-6-4
+$this->faker->secondaryAddress();   	// ハイツ中村108号
 
-$this->faker->areaNumber;		// 1～10 の間の値
-$this->faker->buildingNumber;    	// 101～110 の間の値
+$this->faker->areaNumber();		// 1～10 の間の値
+$this->faker->buildingNumber();    	// 101～110 の間の値
 ```
 
 # 個人情報（名前、メルアド、電話）
 
 ```php
-$this->faker->name;			// 山田 太郎
-$this->faker->firstName;		// 太郎
-$this->faker->lastName;		// 山田
-$this->faker->lastKanaName;		// ヤマダ
+$this->faker->name();			// 山田 太郎
+$this->faker->firstName();		// 太郎
+$this->faker->lastName();		// 山田
+$this->faker->lastKanaName();		// ヤマダ
 $this->faker->firstKanaName();	// タロウ or ハナコ（引数に'male', 'female' で性別指定可）
-$this->faker->firstKanaNameMale;	// タロウ
-$this->faker->firstKanaNameFemale;	// ハナコ
+$this->faker->firstKanaNameMale();	// タロウ
+$this->faker->firstKanaNameFemale();	// ハナコ
 
-$this->faker->unique()->safeEmail;     // nakamura.ryohei@example.com（重複の無いメルアド）
-$this->faker->phoneNumber; 		// 0135-67-7343
+$this->faker->unique()->safeEmail();     // nakamura.ryohei@example.com（重複の無いメルアドで、実在しないドメイン）
+$this->faker->phoneNumber(); 		// 0135-67-7343
 ```
 
 # 文字列
@@ -78,8 +78,8 @@ $this->faker->dateTimeBetween('-3days', '3days')->format('Y-m-d');	// 2019-12-25
 # その他
 
 ```php
-$this->faker->colorName;  	// Gold, Fuchsia, AntiqueWhite 等
-$this->faker->url;         	// https://www.yahaoo.co.jp/
+$this->faker->colorName();  	// Gold, Fuchsia, AntiqueWhite 等
+$this->faker->url();         	// https://www.yahaoo.co.jp/
 $this->faker->latitude(35.54915506146918, 36.06591802134296);    // 緯度
 $this->faker->longitude(138.96409298125002, 140.30442501250002); // 経度
 ```
@@ -91,7 +91,7 @@ $this->faker->longitude(138.96409298125002, 140.30442501250002); // 経度
 ```php
 // 重複しないようにデータを返す
 // 但し、それ以上重複しない値を返せない時は、エラーとなる
-$this->faker->unique()->safeEmail;
+$this->faker->unique()->safeEmail();
 $this->faker->unique()->randomElement([1, 2, 3]);  // 4 回呼び出してしまうとエラー
 ```
 
