@@ -2,6 +2,8 @@
 
 詳しくは、旧本家サイトにて。　[旧本家サイト](https://github.com/fzaninotto/Faker)　[新本家サイト](https://github.com/fakerphp/faker)
 
+Laravel 9.18 からは、fake() ヘルパー関数も使えます。例： fake()->name();
+
 # 住所系
 
 ```php
@@ -9,8 +11,8 @@ $this->faker->postcode1();       	// 834（郵便番号3桁）
 $this->faker->postcode2();       	// 8290（郵便番号4桁）
 $this->faker->postcode();       	// 8348290（郵便番号7桁）
 $this->faker->prefecture();     	// 東京都
-$this->faker->city();            	// 鈴木市
 $this->faker->ward();            	// 南区
+$this->faker->city();            	// 鈴木市
 $this->faker->streetAddress();   	// 斉藤町若松8-6-4
 $this->faker->secondaryAddress();   	// ハイツ中村108号
 
