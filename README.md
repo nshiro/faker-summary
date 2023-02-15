@@ -44,8 +44,9 @@ $this->faker->realText(10);    	// 日本語対応あり。最小 10～
 $this->faker->sentence(8);            // タイトルなどに（英語）
 $this->faker->paragraph(40);          // 本文などに（英語）
 $this->faker->paragraphs(5, true);    // 改行コード付きの本文などに（英語）
-    
-\Str::random(10);               // laravelのヘルパー関数（英数字のみ）。例：「TkO41KdieO」
+
+$this->faker->regexify('[a-zA-Z0-9]{10}');   // 正規表現を使ったランダムな文字列
+\Str::random(10);                            // laravelのヘルパー関数（英数字のみ）。例：「TkO41KdieO」
     
 // 日本語でも改行コードほしい時は、以下。
 preg_replace("/。/", "。\n\n", $this->faker->realText(150));
