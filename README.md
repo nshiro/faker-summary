@@ -34,6 +34,8 @@ $this->faker->firstKanaNameFemale();	// ハナコ
 
 $this->faker->unique()->safeEmail();     // nakamura.ryohei@example.com（重複の無いメルアドで、実在しないドメイン）
 $this->faker->phoneNumber(); 		// 0135-67-7343
+
+$this->faker->company();  		// 株式会社 伊藤
 ```
 
 # 文字列
