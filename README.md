@@ -114,7 +114,7 @@ fake()->optional(0.1)->randomElement([1, 2, 3]);  // 90%の確率でnullを返�
 # おまけ
 
 ```php
-// laravel で Faker の日本語設定（config/app.php で）
-'faker_locale' => 'ja_JP',
-
+// laravel で Faker の日本語設定
+APP_FAKER_LOCALE=ja_JP        // .env の場合（Laravel 11～）
+'faker_locale' => 'ja_JP',    // config/app.php の場合
 ```
